@@ -166,6 +166,11 @@ const homeExperiencePreview = document.querySelector("#home-experience-preview")
 const experienceReferenceLinks = document.querySelector("#experience-reference-links");
 let activeFilter = "All";
 
+function closeNavigation() {
+  nav.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
+}
+
 function showPage() {
   const requestedPage = window.location.hash.slice(1);
   const pageName = pages.some((page) => page.dataset.page === requestedPage) ? requestedPage : "home";
@@ -179,8 +184,7 @@ function showPage() {
     if (link.dataset.route === pageName) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   });
-  nav.classList.remove("is-open");
-  menuToggle.setAttribute("aria-expanded", "false");
+  closeNavigation();
   if (projectDialog.open) projectDialog.close();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -432,6 +436,23 @@ menuToggle.addEventListener("click", () => {
   const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
   menuToggle.setAttribute("aria-expanded", String(!isOpen));
   nav.classList.toggle("is-open", !isOpen);
+});
+
+document.addEventListener("click", (event) => {
+  if (nav.classList.contains("is-open") && !nav.contains(event.target) && !menuToggle.contains(event.target)) {
+    closeNavigation();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && nav.classList.contains("is-open")) {
+    closeNavigation();
+    menuToggle.focus();
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1120) closeNavigation();
 });
 
 document.querySelectorAll(".filter-button").forEach((button) => {
