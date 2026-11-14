@@ -46,16 +46,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-
 
 .hero { position: relative; overflow: hidden; background: var(--navy); color: var(--white); }
 .hero-layout { display: grid; min-height: min(680px, calc(100vh - 76px)); grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: center; gap: clamp(36px, 6vw, 80px); padding-block: 66px 78px; }
-.hero-content { min-width: 0; }
+.hero-content { position: relative; z-index: 2; min-width: 0; color: var(--white); }
 .eyebrow { display: flex; align-items: center; gap: 11px; margin: 0 0 18px; color: var(--slate); font-size: 10px; font-weight: 700; letter-spacing: .17em; line-height: 1.5; text-transform: uppercase; }
 .eyebrow-dark { color: var(--blue); }
 .eyebrow-line { display: inline-block; width: 25px; height: 1px; background: var(--blue); }
 .hero h1 { max-width: 650px; margin: 0 0 21px; color: var(--white); font-size: clamp(42px, 4.7vw, 62px); font-weight: 700; letter-spacing: -.065em; line-height: 1.04; }
 .hero h1 span { color: var(--blue); }
 .hero-intro { max-width: 465px; margin-bottom: 31px; color: var(--white); font-size: 15px; line-height: 1.75; }
-.hero-visual { width: min(100%, 460px); justify-self: end; margin: 0; }
-.hero-photo { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border: 1px solid rgba(248,250,252,.2); border-radius: 12px; box-shadow: 0 24px 60px rgba(0,0,0,.24); }
-.hero-photo-caption { display: block; margin-top: 12px; color: var(--slate); font-size: 9px; letter-spacing: .035em; line-height: 1.5; }
+.hero-visual { position: absolute; z-index: 1; inset: 0 0 0 auto; width: 46%; height: 100%; margin: 0; }
+.hero-visual::after { position: absolute; inset: 0; background: linear-gradient(90deg, var(--navy), rgba(17,24,39,.35) 25%, rgba(17,24,39,.08) 70%), linear-gradient(0deg, rgba(17,24,39,.72), transparent 34%); content: ""; }
+.hero-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero-photo-caption { position: absolute; z-index: 1; right: 24px; bottom: 18px; left: 24px; color: var(--white); font-size: 9px; letter-spacing: .035em; line-height: 1.5; }
 .button-row { display: flex; flex-wrap: wrap; gap: 12px; }
 .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 20px; padding: 0 19px; border-radius: var(--radius); font-size: 11px; font-weight: 700; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
 .button:hover { transform: translateY(-2px); }
@@ -337,7 +338,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-
   .footer-main { flex-wrap: wrap; }
   .hero-layout { min-height: 590px; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 30px; padding-block: 56px 68px; }
   .hero h1 { max-width: 560px; font-size: clamp(38px, 5vw, 52px); }
-  .hero-visual { width: min(100%, 420px); }
+  .hero-visual { width: 48%; }
   .service-section-layout, .project-section-layout { gap: 38px; }
   .service-empty { padding: 22px; }
   .project-grid { grid-template-columns: repeat(2,1fr); }
@@ -369,9 +370,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-
   .primary-nav a { min-height: 44px; padding: 9px 6px; font-size: 11px; line-height: 1.35; }
   .primary-nav a::after { display: none; }
   .primary-nav a[aria-current="page"] { padding-left: 10px; border-left: 2px solid var(--blue); background: rgba(37,99,235,.06); }
-  .hero-layout { min-height: 0; grid-template-columns: 1fr; gap: 30px; padding-block: 44px 62px; }
-  .hero-content { order: 0; }
-  .hero-visual { width: min(100%, 460px); justify-self: start; }
+  .hero-layout { width: 100%; min-height: 0; grid-template-columns: 1fr; gap: 0; padding: 0 18px; }
+  .hero-content { order: 0; padding: 44px 0 34px; }
+  .hero-visual { position: relative; inset: auto; width: calc(100% + 36px); height: clamp(280px, 72vw, 380px); justify-self: start; margin: 0 -18px; }
+  .hero-photo { height: 100%; }
+  .hero-photo-caption { right: 18px; bottom: 14px; left: 18px; }
   .hero h1 { max-width: 500px; font-size: clamp(43px, 11vw, 59px); }
   .hero-intro { max-width: 370px; font-size: 13px; }
   .hero-note { flex-wrap: wrap; margin-top: 31px; }

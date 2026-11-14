@@ -125,8 +125,8 @@ const portfolioData = {
     {
       title: "Technical Drawing & Electrical Planning",
       items: ["Electrical Drawing Reading", "Electrical Layout Reading", "Wiring Diagram Understanding", "Electrical Schematic Reading", "Circuit Diagram Understanding", "Basic Electrical Planning"],
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85",
-      imageAlt: "Illustrative technical planning stock photo, not Mohammad Hamid or his work",
+      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85",
+      imageAlt: "Illustrative stock photo of technical drawings and building plans, not Mohammad Hamid or his work",
       photoReferences: [
         "https://images.openai.com/static-rsc-4/7Zhse6v-QItwT-lmUP-z_5HcYioCoSDk_Fvc-oogNYyE55w8stT6729S-B4DT7SueMz5xbYcl_r2sFEM5cJs1f38eXFUey3wNjbDQ2zkZG-9rds5Kjfz9yWUuD7LisPnwqmabGn8nqSYMjaJiNeucViazNxyAmxpV2EvBmWdi4M?purpose=inline",
         "https://images.openai.com/static-rsc-4/eLS1KlbQ2b0m8DheyeXweIMg8ypV0CY-3gKlQsx651zpdn7OUWOCNALqDUPAUc5HTLdpeFgfFJxiDykL-SAlR2VAWJ8FK81J-PZqLxWZINySTOmpcK5DlhNZ95QpAKYhtxZzFuQvuy_OHOr0Klk7aV5YFjpvciOzA6A9i9f9HEo?purpose=inline",
