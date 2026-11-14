@@ -37,20 +37,23 @@
     <main id="main">
       <section class="page is-active" id="page-home" data-page="home" aria-labelledby="hero-title">
         <div class="hero">
-          <div class="hero-photo" role="img" aria-label="Illustrative stock photo of an electrician working at an electrical panel"></div>
-          <div class="hero-shade"></div>
-          <div class="hero-content container">
-            <p class="eyebrow"><span class="eyebrow-line"></span> Independent Electrician</p>
-            <h1 id="hero-title">Professional Electrical Services <span>You Can Trust.</span></h1>
-            <p class="hero-intro">I’m Mohammad Hamid, an independent electrician. This portfolio brings together my work and professional background.</p>
-            <div class="button-row">
-              <a class="button button-primary" href="#contact">Contact Me <span aria-hidden="true">↗</span></a>
-              <a class="button button-outline" href="#projects">View My Projects <span aria-hidden="true">→</span></a>
-              <button class="button button-whatsapp" type="button" disabled title="WhatsApp number not provided yet" aria-label="WhatsApp contact unavailable until a verified number is provided">WhatsApp <small>number needed</small></button>
+          <div class="hero-layout container">
+            <div class="hero-content">
+              <p class="eyebrow"><span class="eyebrow-line"></span> Independent Electrician</p>
+              <h1 id="hero-title">Professional Electrical Services <span>You Can Trust.</span></h1>
+              <p class="hero-intro">I’m Mohammad Hamid, an independent electrician. This portfolio brings together my work and professional background.</p>
+              <div class="button-row">
+                <a class="button button-primary" href="#contact">Contact Me <span aria-hidden="true">↗</span></a>
+                <a class="button button-outline" href="#projects">View My Projects <span aria-hidden="true">→</span></a>
+                <button class="button button-whatsapp" type="button" disabled title="WhatsApp number not provided yet" aria-label="WhatsApp contact unavailable until a verified number is provided">WhatsApp <small>number needed</small></button>
+              </div>
+              <div class="hero-note"><span class="status-dot"></span> Personal portfolio <span class="note-divider">/</span> Independent electrician</div>
             </div>
-            <div class="hero-note"><span class="status-dot"></span> Personal portfolio <span class="note-divider">/</span> Independent electrician</div>
+            <figure class="hero-visual">
+              <img class="hero-photo" src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&amp;fit=crop&amp;w=960&amp;q=88" alt="Illustrative stock photo of an electrician working at a wall electrical fitting; not Mohammad Hamid">
+              <figcaption class="hero-photo-caption">Illustrative stock photography — not Mohammad Hamid or his work</figcaption>
+            </figure>
           </div>
-          <span class="hero-photo-caption">Illustrative stock photography — not Mohammad Hamid or his work</span>
           <div class="hero-index" aria-hidden="true"><span>01</span><i></i><span>05</span></div>
         </div>
 
@@ -292,6 +295,7 @@
         <p class="eyebrow eyebrow-dark" id="dialog-category"></p>
         <h2 id="dialog-title"></h2>
         <p class="dialog-description" id="dialog-description"></p>
+        <p class="dialog-image-credit" id="dialog-image-credit" hidden></p>
         <div class="dialog-meta" id="dialog-meta" hidden></div>
         <section class="dialog-work-details" id="dialog-work-details" hidden><h3>Work details</h3><p id="dialog-work-details-copy"></p></section>
         <section class="dialog-additional-photos" id="dialog-additional-photos" hidden><h3>Additional photographs</h3><div class="dialog-photo-grid" id="dialog-additional-photo-grid"></div></section>
