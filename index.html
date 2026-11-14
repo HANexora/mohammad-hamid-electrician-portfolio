@@ -91,7 +91,7 @@
           <div class="container">
             <div class="section-heading heading-inline">
               <div><p class="eyebrow eyebrow-dark">Skills &amp; expertise</p><h2 id="home-skills-title">Skill categories</h2></div>
-              <p class="muted-copy">Six categories are ready for review; sample skills are labeled on the dedicated page.</p>
+              <p class="muted-copy">Seven categories are ready for review; sample skills are labeled on the dedicated page.</p>
             </div>
             <p class="demo-warning">Demo examples only — confirm/replace before publishing.</p>
             <a class="text-link" href="#skills">Explore Skills &amp; Expertise <span aria-hidden="true">→</span></a>
@@ -135,12 +135,14 @@
         <section class="section-pad section-light project-feature" aria-labelledby="recent-projects-title">
           <div class="container project-section-layout">
             <div class="project-section-heading">
-              <p class="eyebrow eyebrow-dark">Selected work</p>
-              <h2 id="recent-projects-title">Recent projects</h2>
+              <p class="eyebrow eyebrow-dark">Project gallery preview</p>
+              <h2 id="recent-projects-title">Featured project concepts</h2>
               <a class="text-link" href="#projects">View all projects <span aria-hidden="true">→</span></a>
             </div>
-            <p class="demo-warning project-demo-warning">DEMO CONTENT — REPLACE BEFORE PUBLISHING. Project titles and photos below are samples, not Mohammad Hamid’s completed work.</p>
-            <div class="project-grid home-project-grid" id="home-project-grid" aria-label="Demo project samples"></div>
+            <div class="project-feature-content">
+              <p class="demo-warning project-demo-warning">VISUAL REFERENCES ONLY. These illustrative categories and stock photos are not verified experience or completed work by Mohammad Hamid.</p>
+              <div class="project-grid home-project-grid" id="home-project-grid" aria-label="Illustrative project concepts"></div>
+            </div>
           </div>
         </section>
 
@@ -191,7 +193,7 @@
         <div class="page-hero container">
           <p class="eyebrow eyebrow-dark">Skills &amp; expertise</p>
           <h1 id="skills-title">Skills <span>&amp; Expertise</span></h1>
-          <p>Six categories are set up for review. Individual examples are temporary and must be confirmed before publishing.</p>
+          <p>Seven categories are set up for review. Individual examples are temporary and must be confirmed before publishing.</p>
         </div>
         <div class="container section-pad">
           <p class="demo-warning skill-section-warning">DEMO — CONFIRM/REPLACE BEFORE PUBLISHING. These examples are not verified qualifications. The card photos are illustrative stock imagery, not Mohammad Hamid or his work.</p>
@@ -247,21 +249,21 @@
       </section>
 
       <section class="page inner-page projects-page" id="page-projects" data-page="projects" aria-labelledby="projects-title" hidden>
-        <div class="page-hero page-hero-centered container"><p class="eyebrow eyebrow-dark">Work gallery</p><h1 id="projects-title">Selected <span>Projects</span></h1><p>Demo project concepts are shown for layout only. Replace every sample before publishing.</p></div>
+        <div class="page-hero page-hero-centered container"><p class="eyebrow eyebrow-dark">Project gallery preview</p><h1 id="projects-title">Project <span>References</span></h1><p>These visual concepts are for gallery layout only; none are claimed as Mohammad Hamid’s completed work or verified experience.</p></div>
         <div class="container section-pad">
-          <p class="demo-warning project-demo-warning">DEMO CONTENT — REPLACE BEFORE PUBLISHING. These sample concepts and illustrative stock images are not work completed by Mohammad Hamid.</p>
+          <p class="demo-warning project-demo-warning">VISUAL REFERENCES ONLY. Replace with confirmed categories and genuine project photographs before presenting any work as Mohammad Hamid’s experience.</p>
           <div class="filter-list" role="group" aria-label="Filter projects by category">
-            <button type="button" class="filter-button is-selected" data-filter="All" aria-pressed="true">All</button>
-            <button type="button" class="filter-button" data-filter="Residential" aria-pressed="false">Residential</button>
-            <button type="button" class="filter-button" data-filter="Commercial" aria-pressed="false">Commercial</button>
+            <button type="button" class="filter-button is-selected" data-filter="All" aria-pressed="true">All Projects</button>
+            <button type="button" class="filter-button" data-filter="Wall Chipping" aria-pressed="false">Wall Chipping</button>
             <button type="button" class="filter-button" data-filter="Wiring" aria-pressed="false">Wiring</button>
             <button type="button" class="filter-button" data-filter="Lighting" aria-pressed="false">Lighting</button>
-            <button type="button" class="filter-button" data-filter="Panel" aria-pressed="false">Panel</button>
-            <button type="button" class="filter-button" data-filter="Maintenance" aria-pressed="false">Maintenance</button>
-            <button type="button" class="filter-button" data-filter="Other" aria-pressed="false">Other</button>
+            <button type="button" class="filter-button" data-filter="Switchboards" aria-pressed="false">Switchboards</button>
+            <button type="button" class="filter-button" data-filter="Electrical Panels" aria-pressed="false">Electrical Panels</button>
+            <button type="button" class="filter-button" data-filter="Installation" aria-pressed="false">Installation</button>
+            <button type="button" class="filter-button" data-filter="Repair &amp; Maintenance" aria-pressed="false">Repair &amp; Maintenance</button>
           </div>
           <div class="project-grid" id="project-grid" aria-live="polite"></div>
-          <div class="empty-state project-empty" id="project-empty"><h2>No sample in this category yet</h2><p>Actual project details and photos have not been supplied.</p></div>
+          <div class="empty-state project-empty" id="project-empty"><h2>No project references are ready</h2><p>No verified project records or genuine photographs have been supplied.</p></div>
         </div>
       </section>
 
@@ -285,7 +287,16 @@
     <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
       <button class="dialog-close" type="button" aria-label="Close project details">×</button>
       <div class="dialog-image" id="dialog-image"></div>
-      <div class="dialog-copy"><p class="demo-warning">DEMO CONTENT — REPLACE BEFORE PUBLISHING</p><p class="eyebrow eyebrow-dark" id="dialog-category"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p></div>
+      <div class="dialog-copy">
+        <p class="demo-warning" id="dialog-warning">VISUAL REFERENCE ONLY - NOT COMPLETED WORK</p>
+        <p class="eyebrow eyebrow-dark" id="dialog-category"></p>
+        <h2 id="dialog-title"></h2>
+        <p class="dialog-description" id="dialog-description"></p>
+        <div class="dialog-meta" id="dialog-meta" hidden></div>
+        <section class="dialog-work-details" id="dialog-work-details" hidden><h3>Work details</h3><p id="dialog-work-details-copy"></p></section>
+        <section class="dialog-additional-photos" id="dialog-additional-photos" hidden><h3>Additional photographs</h3><div class="dialog-photo-grid" id="dialog-additional-photo-grid"></div></section>
+        <section class="dialog-reference-section" id="dialog-reference-section" hidden><h3>Visual references</h3><div class="dialog-reference-links" id="dialog-reference-links"></div></section>
+      </div>
     </dialog>
   </body>
 </html>

@@ -30,6 +30,31 @@ const portfolioData = {
     "https://images.openai.com/static-rsc-4/gr5aJ_ojkjwN064fEanIEadnirfojk0wDHpW3D4wKHQp0fvaQOzi6a7WQJ7p_y3Q_AGo-5ljKPhXRJ6Yy6l0OB0aszng8c0_8-BvCY6j-HU2fF10BP92DDroM43eNXZAbviKOnLHQtc_KL1Uxy9C_6TE6BO6UYSJKBrxrrDwDaQ?purpose=inline",
     "https://images.openai.com/static-rsc-4/WXq6fvYzAhby54wANpeEwlSHRWQXZ9hOI_UrKa3JbX09P-cpnFvSZEz9ZbFhmmSUY_emUVw0SkUrlPj3Wl5ppxh9f2Qf7AlYx_2HIPI0FkIhROh-9mg_FN-FN2Ng4zRUeNXKpwXO2j_vCP6QMDUctTtION1Ely9XhsjIe8a6dIw?purpose=inline"
   ],
+  projectRecordTemplate: {
+    title: "",
+    category: "",
+    filterGroup: "",
+    description: "",
+    location: "",
+    completionDate: "",
+    workDetails: "",
+    image: "",
+    additionalImages: [],
+    photoReferences: [],
+    featured: false
+  },
+  projectFieldRequirements: [
+    { name: "title", required: true },
+    { name: "category", required: true },
+    { name: "filterGroup", required: true },
+    { name: "image", requiredForPublishedProjects: true, description: "At least one genuine project photograph is required before publishing." },
+    { name: "description", required: false },
+    { name: "location", required: false },
+    { name: "completionDate", required: false },
+    { name: "workDetails", required: false },
+    { name: "additionalImages", required: false },
+    { name: "featured", required: false }
+  ],
   skills: [
     {
       title: "Electrical Installation",
@@ -96,57 +121,164 @@ const portfolioData = {
         "https://images.openai.com/static-rsc-4/nLIk-8E2UL5DaG7KCiNSmI9wr4VEl_zqIQL_ff1FiIdvh6ADIQZ5eKeV4QTPCbwMiFs645dX9uBs-aPc4AMIL_hiZmPOyHbCC8oj8llKMyZ377xIV6bPiudUlT0o9OH0P-FB_M5Ome_k_qUeoG90GxpQtVsLzU4Aa2uWaFCZPZI?purpose=inline",
         "https://images.openai.com/static-rsc-4/8Xy-qBpq45wQGgzcvP-wqM2ho91vGLyXhJhBAr4eNXw_NJoZM3lk_sQ0IPdjLyl3D_HkuV4vWtenrzZhspAPwbiU19xAkwSk3BiMayzWOtwAGukPfvBzT5UnDNUVtUPDc0_zhAoUlNxpEvno_nlrHDbvU8kUi7s_UXnxukoNa34?purpose=inline"
       ]
+    },
+    {
+      title: "Technical Drawing & Electrical Planning",
+      items: ["Electrical Drawing Reading", "Electrical Layout Reading", "Wiring Diagram Understanding", "Electrical Schematic Reading", "Circuit Diagram Understanding", "Basic Electrical Planning"],
+      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85",
+      imageAlt: "Illustrative technical planning stock photo, not Mohammad Hamid or his work",
+      photoReferences: [
+        "https://images.openai.com/static-rsc-4/7Zhse6v-QItwT-lmUP-z_5HcYioCoSDk_Fvc-oogNYyE55w8stT6729S-B4DT7SueMz5xbYcl_r2sFEM5cJs1f38eXFUey3wNjbDQ2zkZG-9rds5Kjfz9yWUuD7LisPnwqmabGn8nqSYMjaJiNeucViazNxyAmxpV2EvBmWdi4M?purpose=inline",
+        "https://images.openai.com/static-rsc-4/eLS1KlbQ2b0m8DheyeXweIMg8ypV0CY-3gKlQsx651zpdn7OUWOCNALqDUPAUc5HTLdpeFgfFJxiDykL-SAlR2VAWJ8FK81J-PZqLxWZINySTOmpcK5DlhNZ95QpAKYhtxZzFuQvuy_OHOr0Klk7aV5YFjpvciOzA6A9i9f9HEo?purpose=inline",
+        "https://images.openai.com/static-rsc-4/im3BAbIJA4tGvIxfubhbG-rezqUsaEvGlfIWG7WCbcwruY43u6ciWLQBNX0IdZcT_5MFDY0OMEmEJ_nCaC52HpM_MAm_bJod2U7Qn2XVdWuMuELDZdTkumnAXjZj2xHKxzfF5chSyP1ONJRSP3RNq9WMLOPjxcPOdHEi7G1Y25o?purpose=inline"
+      ]
     }
   ],
   projects: [
     {
-      category: "Residential",
-      title: "Demo: Residential lighting concept",
-      description: "Illustrative layout concept only—not a completed customer project. Replace with verified details.",
+      category: "Wall Cutting & Chipping (Wall Chasing)",
+      filterGroup: "Wall Chipping",
+      title: "Wall Chasing - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
       image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1000&q=85",
-      imageAlt: "Illustrative electrician stock photo, not Mohammad Hamid or his work"
+      imageAlt: "Illustrative electrician stock photo, not Mohammad Hamid or his work",
+      photoReferences: [
+        { title: "Wall chasing guide", url: "https://images.openai.com/static-rsc-4/r2qiGxeQ7Tn-80v1eX7S0w3CV1kHoXzm5yiANA_YY5iIa74WdzC8VFoi2yHRk0BJ-chHcxQ62sXK6vlXeJ72JnfPGihB9axD58QDS67KInJMO070I2nou32GBHWqPj6tHw5tD2FLvC6mmFuXJ2dbFuj38lsOmk1rCyc3Ug8iikY?purpose=inline" },
+        { title: "Cable channel chased into a wall", url: "https://images.openai.com/static-rsc-4/qc3SBDe0rqn6F8mCsLxR_7eYNowGwMGKe4YsGLTwmPNnCj-US4jpZxM0jEFQms-S9H_oIe257NI_Pnr8GgIYATngTK4lQqwzmVM2by9v0o1RxqgbBSuDcVKB1S2UXoAdXT3mVrBj9DMJJ_5r8KLCoaF89Q_XrGYsONhv6HwiyDg?purpose=inline" }
+      ],
+      isDemoConcept: true,
+      featured: true
     },
     {
-      category: "Wiring",
-      title: "Demo: Wiring layout concept",
-      description: "Illustrative planning concept only—not a completed project. Replace with genuine details.",
+      category: "Concealed Electrical Wiring",
+      filterGroup: "Wiring",
+      title: "Concealed Wiring - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
       image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85",
-      imageAlt: "Illustrative technical-planning stock photo, not Mohammad Hamid or his work"
+      imageAlt: "Illustrative technical-planning stock photo, not Mohammad Hamid or his work",
+      isDemoConcept: true,
+      featured: true
     },
     {
-      category: "Panel",
-      title: "Demo: Panel work concept",
-      description: "Illustrative electrical-work concept only—not a completed project. Replace with verified details.",
-      image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1000&q=85",
-      imageAlt: "Illustrative electronics-repair stock photo, not Mohammad Hamid or his work"
-    },
-    {
-      category: "Commercial",
-      title: "Demo: Commercial workspace concept",
-      description: "Sample visual for layout only—not a customer site or claimed completed work.",
-      image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85",
-      imageAlt: "Illustrative commercial-interior stock photo, not Mohammad Hamid or his work"
-    },
-    {
-      category: "Lighting",
-      title: "Demo: Interior lighting concept",
-      description: "Illustrative lighting idea only—not a completed installation or project claim.",
-      image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1000&q=85",
-      imageAlt: "Illustrative interior-lighting stock photo, not Mohammad Hamid or his work"
-    },
-    {
-      category: "Maintenance",
-      title: "Demo: Electrical maintenance concept",
-      description: "Sample portfolio concept only; no customer work or service offering is being claimed.",
+      category: "Surface Electrical Wiring",
+      filterGroup: "Wiring",
+      title: "Surface Wiring - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
       image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1000&q=85",
-      imageAlt: "Illustrative electrician stock photo, not Mohammad Hamid or his work"
+      imageAlt: "Illustrative electrician stock photo, not Mohammad Hamid or his work",
+      isDemoConcept: true
     },
     {
-      category: "Other",
-      title: "Demo: Electrical workspace concept",
-      description: "Illustrative sample for page design only—not Mohammad Hamid’s workspace or project.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85",
-      imageAlt: "Illustrative electronics stock photo, not Mohammad Hamid or his work"
+      category: "Switchboard & Socket Installation",
+      filterGroup: "Switchboards",
+      title: "Switchboard & Socket - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
+      image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1000&q=85",
+      imageAlt: "Illustrative electrical components stock photo, not Mohammad Hamid or his work",
+      isDemoConcept: true
+    },
+    {
+      category: "LED Light Installation",
+      filterGroup: "Lighting",
+      title: "LED Lighting - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
+      image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1000&q=85",
+      imageAlt: "Illustrative lighting stock photo, not Mohammad Hamid or his work",
+      photoReferences: [
+        { title: "Ceiling electrical and lighting reference", url: "https://images.openai.com/static-rsc-4/_pEIwaEOYK6GGTVV3RbFUzxuZlXX2e9qwx5cd7MlHD8ysRrgwAvlkbu5HBKioTp0M8O0xKvfxe8XtNpc7SIT9711TGr2RKneIIcTbqgmvIfAb2UFROfSnMqpbbrVqFDRNrGXvAo92RsWgZGtFw8cCESwipy_6p7pBHoIagejvYg?purpose=inline" },
+        { title: "Downlight installation guide", url: "https://images.openai.com/static-rsc-4/4Sy-EF4ZppvsXhnEUUw6D6iO5_heWAvdl4P5r7Ye7n8Td0w9eTOjmp59mXPbbuaxkvtgu_3mf7C5GGPLNFtrddHwHVVEJx4RZHVK_hRS2axwG49MI4KIvNMIUDNHi0uH-iPGKAlwgm99bTsQgeXZTTDu7tYxdc7PYkC4nplTtwc?purpose=inline" }
+      ],
+      isDemoConcept: true,
+      featured: true
+    },
+    {
+      category: "Ceiling Light Installation",
+      filterGroup: "Lighting",
+      title: "Ceiling Lights - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
+      image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1000&q=85",
+      imageAlt: "Illustrative lighting stock photo, not Mohammad Hamid or his work",
+      isDemoConcept: true
+    },
+    {
+      category: "Chandelier & Decorative Lighting",
+      filterGroup: "Lighting",
+      title: "Decorative Lighting - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
+      image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1000&q=85",
+      imageAlt: "Illustrative lighting stock photo, not Mohammad Hamid or his work",
+      photoReferences: [
+        { title: "Chandelier installation reference", url: "https://images.openai.com/static-rsc-4/HOED21MUmAKi6745adlMLF8fkJc-dWccYqeo6WeYnScDI5HOYjFcrXIizHCJJbZuWoavQHQ8GmhjyHdVZE4T4TSa9dVSfqCje-FZIliQ17trlX54awVpJhVuxemUn2V9fx9qw_K2oyBpY_YFwMCoQ7FlEME7Z1cWfRmH7iJEL3k?purpose=inline" },
+        { title: "Decorative ceiling lighting reference", url: "https://images.openai.com/static-rsc-4/OCfljFZL6pPKOpbhHkFAioGVue2Cr8AlT_wePNpWv6WKCGySXAfz8Cw52HiiAw5lIrrrNMXCpJ2c5snbQ_YAhs0foVBuQK41qW5xPkdJzGi7giIY-GNoswwJhDtqEaGfew8xOFXIvGbrOH3b-RjC7vfFmgU2n3vYFgeco__8cuA?purpose=inline" }
+      ],
+      isDemoConcept: true
+    },
+    {
+      category: "Ceiling Fan Installation",
+      filterGroup: "Installation",
+      title: "Ceiling Fan - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
+      image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1000&q=85",
+      imageAlt: "Illustrative electrician stock photo, not Mohammad Hamid or his work",
+      isDemoConcept: true
+    },
+    {
+      category: "Electrical Panel & Distribution Board",
+      filterGroup: "Electrical Panels",
+      title: "Distribution Board - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
+      image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1000&q=85",
+      imageAlt: "Illustrative electrical components stock photo, not Mohammad Hamid or his work",
+      photoReferences: [
+        { title: "Distribution panel installation reference", url: "https://images.openai.com/static-rsc-4/gEOZiyzoP7e-GUIHRFUTJxPPRJHnqWZ07wssinQ0yVzLZOkpX5HFosAw_VkMUMSdNHIfWJ8N0YhbXJeplUGnjsxRLAKsGarepVUn1NFIdqGr8tgp6gVy5T1eRRgoQEK_J4lYvH7zpk_AkvrQRzO6QDiRubqRGr8JuF95lLm-e6k?purpose=inline" },
+        { title: "Electrical distribution board reference", url: "https://images.openai.com/static-rsc-4/zVqFQi8h95dwa9eLdEoK1FRvmDjPd2aFZ1Y3fyDE1q5mdL5Zk1NzG-2iCUYP1qmvEGdjoPGN1flCX58mPkn8qI-pxSagDaQaC1PlS-d68SVFwcwo6cr4m8XRdQilCjfnDl_cTKhSQTuAalNwQfYe8ZEpb1elboy8lmVcNb2JWRk?purpose=inline" }
+      ],
+      isDemoConcept: true
+    },
+    {
+      category: "MCB Installation",
+      filterGroup: "Electrical Panels",
+      title: "MCB Installation - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
+      image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1000&q=85",
+      imageAlt: "Illustrative electrician stock photo, not Mohammad Hamid or his work",
+      isDemoConcept: true
+    },
+    {
+      category: "Earthing Work",
+      filterGroup: "Installation",
+      title: "Earthing - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
+      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85",
+      imageAlt: "Illustrative electrical-work stock photo, not Mohammad Hamid or his work",
+      isDemoConcept: true
+    },
+    {
+      category: "Electrical Repair & Maintenance",
+      filterGroup: "Repair & Maintenance",
+      title: "Electrical Repair - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
+      image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1000&q=85",
+      imageAlt: "Illustrative electrician stock photo, not Mohammad Hamid or his work",
+      isDemoConcept: true
+    },
+    {
+      category: "Residential Electrical Work",
+      filterGroup: "Installation",
+      title: "Residential Electrical Work - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
+      image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1000&q=85",
+      imageAlt: "Illustrative residential electrician stock photo, not Mohammad Hamid or his work",
+      isDemoConcept: true
+    },
+    {
+      category: "Commercial Electrical Work",
+      filterGroup: "Installation",
+      title: "Commercial Electrical Work - Visual Concept",
+      description: "Illustrative layout reference only - not a completed project or verified experience.",
+      image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85",
+      imageAlt: "Illustrative commercial-interior stock photo, not Mohammad Hamid or his work",
+      isDemoConcept: true
     }
   ]
 };
@@ -192,15 +324,15 @@ function showPage() {
 function renderProjects() {
   const projects = activeFilter === "All"
     ? portfolioData.projects
-    : portfolioData.projects.filter((project) => project.category === activeFilter);
+    : portfolioData.projects.filter((project) => project.filterGroup === activeFilter);
 
   projectGrid.replaceChildren(...projects.map(createProjectCard));
-  homeProjectGrid.replaceChildren(...portfolioData.projects.slice(0, 3).map(createProjectCard));
+  homeProjectGrid.replaceChildren(...portfolioData.projects.filter((project) => project.featured).slice(0, 3).map(createProjectCard));
   projectEmpty.hidden = projects.length > 0;
   projectEmpty.querySelector("h2").textContent = activeFilter === "All"
-    ? "No demo samples are ready"
-    : `No demo sample in ${activeFilter} yet`;
-  projectEmpty.querySelector("p").textContent = "No genuine project photos or descriptions have been supplied.";
+    ? "No project references are ready"
+    : `No project references in ${activeFilter} yet`;
+  projectEmpty.querySelector("p").textContent = "No verified project records or genuine photographs have been supplied.";
 }
 
 function createSkillCard(skill) {
@@ -377,7 +509,7 @@ function createProjectCard(project) {
   const card = document.createElement("button");
   card.type = "button";
   card.className = "project-card";
-  card.setAttribute("aria-label", `Open demo project sample: ${project.title}`);
+  card.setAttribute("aria-label", `Open illustrative project reference: ${project.title}`);
   const image = document.createElement("div");
   image.className = "project-card-image";
   const img = document.createElement("img");
@@ -387,11 +519,12 @@ function createProjectCard(project) {
   image.append(img);
   const stockLabel = document.createElement("span");
   stockLabel.className = "stock-image-label";
-  stockLabel.textContent = "Illustrative stock photo";
+  stockLabel.textContent = "Illustrative stock photo - not Mohammad Hamid's work";
   image.append(stockLabel);
   const badge = document.createElement("span");
   badge.className = "project-demo-badge";
-  badge.textContent = "DEMO CONTENT — REPLACE BEFORE PUBLISHING";
+  badge.textContent = "VISUAL REFERENCE ONLY";
+  badge.hidden = !project.isDemoConcept;
   image.append(badge);
 
   const copy = document.createElement("div");
@@ -404,7 +537,7 @@ function createProjectCard(project) {
   description.textContent = project.description;
   const disclaimer = document.createElement("p");
   disclaimer.className = "project-disclaimer";
-  disclaimer.textContent = "DEMO CONTENT — REPLACE BEFORE PUBLISHING";
+  disclaimer.textContent = project.isDemoConcept ? "ILLUSTRATIVE CONCEPT - NOT COMPLETED WORK" : "";
   copy.append(category, title, description, disclaimer);
   card.append(image, copy);
   card.addEventListener("click", () => openProject(project));
@@ -415,6 +548,45 @@ function openProject(project) {
   document.querySelector("#dialog-category").textContent = project.category;
   document.querySelector("#dialog-title").textContent = project.title;
   document.querySelector("#dialog-description").textContent = project.description;
+  const warning = document.querySelector("#dialog-warning");
+  warning.hidden = !project.isDemoConcept;
+  const metadata = document.querySelector("#dialog-meta");
+  metadata.replaceChildren();
+  [
+    ["Location", project.location],
+    ["Completed", project.completionDate]
+  ].filter(([, value]) => value).forEach(([label, value]) => {
+    const item = document.createElement("span");
+    const strong = document.createElement("strong");
+    strong.textContent = `${label}: `;
+    item.append(strong, document.createTextNode(value));
+    metadata.append(item);
+  });
+  metadata.hidden = metadata.childElementCount === 0;
+  const workDetailsSection = document.querySelector("#dialog-work-details");
+  document.querySelector("#dialog-work-details-copy").textContent = project.workDetails || "";
+  workDetailsSection.hidden = !project.workDetails;
+  const additionalPhotosSection = document.querySelector("#dialog-additional-photos");
+  const additionalPhotos = document.querySelector("#dialog-additional-photo-grid");
+  additionalPhotos.replaceChildren(...(project.additionalImages || []).map((url, index) => {
+    const image = document.createElement("img");
+    image.src = url;
+    image.alt = `${project.title} - additional photograph ${index + 1}`;
+    image.loading = "lazy";
+    return image;
+  }));
+  additionalPhotosSection.hidden = additionalPhotos.childElementCount === 0;
+  const referenceSection = document.querySelector("#dialog-reference-section");
+  const referenceLinks = document.querySelector("#dialog-reference-links");
+  referenceLinks.replaceChildren(...(project.photoReferences || []).map((reference) => {
+    const link = document.createElement("a");
+    link.href = reference.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = reference.title;
+    return link;
+  }));
+  referenceSection.hidden = referenceLinks.childElementCount === 0;
   const image = document.querySelector("#dialog-image");
   image.replaceChildren();
   if (project.image) {
@@ -424,8 +596,10 @@ function openProject(project) {
     image.append(img);
     const stockLabel = document.createElement("span");
     stockLabel.className = "stock-image-label";
-    stockLabel.textContent = "Illustrative stock photo — not a Mohammad Hamid project";
-    image.append(stockLabel);
+    if (project.isDemoConcept) {
+      stockLabel.textContent = "Illustrative stock photo - not a Mohammad Hamid project";
+      image.append(stockLabel);
+    }
   } else {
     image.textContent = "Project image";
   }
